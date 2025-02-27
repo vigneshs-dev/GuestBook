@@ -81,7 +81,7 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            vigneshvicky97/flask-guestbook:${{ env.VERSION }}
+            vigneshvicky97/flask-guestbook:${{ github.run_id }}
             vigneshvicky97/flask-guestbook:latest
           cache-from: type=registry,ref=vigneshvicky97/flask-guestbook:latest
           cache-to: type=inline
@@ -99,7 +99,7 @@ jobs:
       # Update Kubernetes Manifest
       - name: Update K8s Manifest
         run: |
-          sed -i "s|image: vigneshvicky97/flask-guestbook:.*|image: vigneshvicky97/flask-guestbook:${{ env.VERSION }}|g" k8s/flask-deployment.yml
+          sed -i "s|image: vigneshvicky97/flask-guestbook:.*|image: vigneshvicky97/flask-guestbook:${{ github.run_id }}|g" k8s/flask-deployment.yml
           cat k8s/flask-deployment.yml
 
       # Commit & Push Updated K8s Manifest
@@ -108,7 +108,7 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions Bot"
           git add k8s/flask-deployment.yml
-          git commit -m "Updated image version to ${{ env.VERSION }}"
+          git commit -m "Updated image version to ${{ github.run_id }}"
           git push origin main
 
       # Deploy to Kubernetes (ArgoCD Auto-Sync)
