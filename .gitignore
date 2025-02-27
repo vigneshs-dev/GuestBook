@@ -1,0 +1,102 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Flask
+instance/
+.webassets-cache
+flask_session/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+.virtualenv/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.project
+.classpath
+.settings/
+*.sublime-workspace
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Redis
+*.rdb
+dump.rdb
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Flask related
+flask_monitoringdashboard.db
+.coverage
+htmlcov/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Testing
+.pytest_cache/
+.hypothesis/
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# Node (if using any JavaScript frontend)
+node_modules/
+bower_components/
+
+# Compiled frontend assets
+static/build/
+static/dist/
