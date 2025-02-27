@@ -57,8 +57,7 @@ jobs:
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
             --push \
-            -t vigneshvicky97/flask-guestbook:${{ env.VERSION }} \
-            -t vigneshvicky97/flask-guestbook:latest .
+            -t vigneshvicky97/flask-guestbook:${{ env.VERSION }} .
 
       # Update K8s Manifests with New Image
       - name: Update K8s Manifests
