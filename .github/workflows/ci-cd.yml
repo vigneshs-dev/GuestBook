@@ -61,7 +61,7 @@ jobs:
       - name: Update K8s Manifests
         run: |
           cat k8s/flask-deployment.yml
-          sed -i "s|image: vigneshvicky97/demo-app:.*|image: vigneshvicky97/flask-guestbook:${{ env.VERSION }}|g" k8s/flask-deployment.yml
+          sed -i "s|image: vigneshvicky97/flask-guestbook:.*|image: vigneshvicky97/flask-guestbook:${{ env.VERSION }}|g" k8s/flask-deployment.yml
           cat k8s/flask-deployment.yml
 
       # Update Github
