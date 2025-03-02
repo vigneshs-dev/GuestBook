@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: vigneshvicky97/flask-guestbook:13612429822
+        image: vigneshvicky97/flask-guestbook:13618217268
         ports:
         - containerPort: 5000
         env:
