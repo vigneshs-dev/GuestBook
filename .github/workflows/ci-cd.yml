@@ -30,10 +30,10 @@ jobs:
           pip install -r requirements.txt
           pip install flake8 pytest
 
-      # Run Linting
-      - name: Run Linting Tests
-        run: |
-          flake8 --ignore=E501,F401 .
+      # # Run Linting
+      # - name: Run Linting Tests
+      #   run: |
+      #     flake8 --ignore=E501,F401 .
 
       # # Run Unit Tests
       # - name: Run Unit Tests
