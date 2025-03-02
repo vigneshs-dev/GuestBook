@@ -79,7 +79,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64/v8, linux/arm/v7
           tags: |
             vigneshvicky97/flask-guestbook:${{ github.run_id }}
             vigneshvicky97/flask-guestbook:latest
