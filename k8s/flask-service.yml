@@ -24,6 +24,7 @@ spec:
       port: 5000
       targetPort: 5000
       nodePort: 30008
-  type: NodePort
+  # type: NodePort
+  type: LoadBalancer
 
   
